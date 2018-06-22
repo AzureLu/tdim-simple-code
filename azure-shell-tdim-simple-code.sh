@@ -33,9 +33,9 @@ az.cmd webapp deployment source config-local-git --name $SITENAME --resource-gro
 
 # the previous command returned the git remote to deploy to
 # use this to set up a new remote named "azure"
-git remote add azure-simple-code "https://$USERNAME@$SITENAME.scm.azurewebsites.net/$SITENAME.git"
+git remote add azure "https://$USERNAME@$SITENAME.scm.azurewebsites.net/$SITENAME.git"
 # push master to deploy the site
-git push azure-simple-code master
+# git push --set-upstream azure master
 
 # browse to the site
 # az webapp browse --name $SITENAME --resource-group $RESOURCEGROUP
