@@ -8,11 +8,11 @@ RUNTIME="node|8.1"
 
 # login supports device login, username/password, and service principals
 # see https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest#az_login
-az.cmd login
-# list all of the available subscriptions
-az.cmd account list -o table
-# set the default subscription for subsequent operations
-az.cmd account set --subscription $SUBSCRIPTION
+# az.cmd login
+# # list all of the available subscriptions
+# az.cmd account list -o table
+# # set the default subscription for subsequent operations
+# az.cmd account set --subscription $SUBSCRIPTION
 # # create a resource group for your application
 # az.cmd group create --name $RESOURCEGROUP --location $LOCATION
 # # create an appservice plan (a machine) where your site will run
@@ -23,7 +23,7 @@ az.cmd account set --subscription $SUBSCRIPTION
 
 # To set up deployment from a local git repository, uncomment the following commands.
 # first, set the username and password (use environment variables!)
-USERNAME="AzureLu"
+USERNAME="AzureSunIcy"
 PASSWORD="q9fpWtbQ"
 az.cmd webapp deployment user set --user-name $USERNAME --password $PASSWORD
 
@@ -33,7 +33,7 @@ az.cmd webapp deployment source config-local-git --name $SITENAME --resource-gro
 
 # the previous command returned the git remote to deploy to
 # use this to set up a new remote named "azure"
-git remote add azure "https://$USERNAME@$SITENAME.scm.azurewebsites.net/$SITENAME.git"
+git remote add azure-simple-code "https://$USERNAME@$SITENAME.scm.azurewebsites.net/$SITENAME.git"
 # push master to deploy the site
 # git push azure master
 
